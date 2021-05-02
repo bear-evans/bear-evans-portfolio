@@ -1,2 +1,5 @@
 # brickdwarf-portfolio
-Portfolio presenting the various projects of the Brick Dwarf.
+
+## About This Project
+
+This portfolio acts as a showcase for my personal projects.
