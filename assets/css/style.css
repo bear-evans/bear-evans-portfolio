@@ -3,6 +3,35 @@ https://paletton.com/#uid=40l0D1kcw9H7M2q9q5ngqeSkgk7kczbi6H0n8C4KjgkwqpuckgyhKh
 */
 
 :root {
-    --bg: rgb(48, 47, 56);
-    --accent: rgb(255, 230, 0);
-}
+/* =================================================
+Variable Declarations for Color Pallete
+===================================================*/
+    /* Monochromatic Colors */
+    --light-mono: rgb(243, 243, 243);
+    --dark-mono: rgb(34, 34, 34);
+    /* Brown Colors */
+    --brown-lightest: rgb(160, 95, 59);
+    --brown-light: rgb(118, 80, 58);
+    --brown-mid: rgb(77, 58, 47);
+    --brown-dark: rgb(43, 35, 30);
+    --brown-darkest: rgb(19, 16, 15);
+    /* Blue Colors */
+    --blue-lightest: rgb(77, 96, 143);
+    --blue-light: rgb(60, 77, 118);
+    --blue-mid: rgb(51, 64, 95);
+    --blue-dark: rgb(40, 50, 75);
+    --blue-darkest: rgb(31, 39, 60);
+    /* Green Colors */
+    --green-lightest: rgb(119, 138, 97);
+    --green-light: rgb(95, 110, 78);
+    --green-mid: rgb(64, 73, 53);
+    --green-dark: rgb(46, 55, 36);
+    --green-darkest: rgb(37, 48, 26);
+    /* Teal Colors */
+    --teal-lightest: rgb(28, 158, 122);
+    --teal-light: rgb(43, 107, 89);
+    --teal-mid: rgb(36, 59, 53);
+    --teal-dark: rgb(18, 25, 23);
+    --teal-darkest: rgb(1, 2, 2);
+
+} 
