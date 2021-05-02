@@ -1,11 +1,18 @@
+/* =================================================
+Imports
+===================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Neucha&family=New+Tegomin&family=Noto+Sans+KR&display=swap');
+
+/* =================================================
+Variable Declarations
+===================================================*/
+
+:root {
 /* My color pallete
 https://paletton.com/#uid=40l0D1kcw9H7M2q9q5ngqeSkgk7kczbi6H0n8C4KjgkwqpuckgyhKhxbggVe0hxlZgwqPk8-a89tjb9dfebs7GeF6E 
 */
 
-:root {
-/* =================================================
-Variable Declarations for Color Pallete
-===================================================*/
     /* Monochromatic Colors */
     --light-mono: rgb(243, 243, 243);
     --dark-mono: rgb(34, 34, 34);
@@ -34,4 +41,82 @@ Variable Declarations for Color Pallete
     --teal-dark: rgb(18, 25, 23);
     --teal-darkest: rgb(1, 2, 2);
 
-} 
+    /* Font Families */
+    --heavy-font: 'New Tegomin', serif;
+    --header-font: 'Neucha', cursive;
+    --main-font: 'Noto Sans KR', sans-serif;;
+    --monospace-font: 'Cutive Mono', monospace;;
+
+    /* Padding and Spacing */
+    --sm-pad: 20px;
+    --med-pad: 50px;
+    --lg-pad: 100px;
+    --xlg-pad: 200px;
+}
+
+/* =================================================
+Universal and Page-Wide CSS
+===================================================*/
+
+body {
+    background-color: var(--brown-darkest);
+    color: var(--light-mono);
+}
+
+/* =================================================
+Header CSS
+===================================================*/
+
+#header-banner {
+    position: relative;
+    background-image: url('../images/wood-panel.jpg');
+    font-family: var(--header-font);
+    color: var(--brown-darkest);
+    width: 100%;
+    height: 600px;
+}
+
+/* This gradient overlays the wood panel background, smoothing the transition to the page background color */
+.fade-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0), 80%, var(--brown-darkest));
+    width: 100%;
+    height: 100%;
+}
+
+.bear-name {
+    color: var(--teal-lightest);
+}
+
+#header-banner h1 {
+    font-family: var(--header-font);
+    padding-left: var(--xlg-pad);
+    padding-top: var(--xlg-pad);
+    font-size:60px;
+}
+
+/* =================================================
+Navigation Links CSS
+===================================================*/
+
+#main-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--teal-lightest);
+    font-family: var(--heavy-font);
+    font-size: 25px;
+    padding: var(--med-pad) var(--sm-pad) var(--med-pad) var(--sm-pad);
+}
+
+#main-nav li {
+    padding: var(--sm-pad) 0 var(--sm-pad) 0;
+}
+
+
+/* =================================================
+Main Content Section CSS
+===================================================*/
+
+/* =================================================
+Footer CSS
+===================================================*/
