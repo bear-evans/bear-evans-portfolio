@@ -61,6 +61,7 @@ Universal and Page-Wide CSS
 body {
     background-color: var(--brown-darkest);
     color: var(--light-mono);
+    font-family: var(--main-font);
 }
 
 /* =================================================
@@ -83,13 +84,20 @@ Header CSS
     height: 100%;
 }
 
+.bear-logo {
+    position: absolute;
+    left:var(--xlg-pad);
+    top:var(--lg-pad);
+    transform: rotate(-12deg);
+}
+
 .bear-name {
     color: var(--teal-lightest);
 }
 
 #header-banner h1 {
     font-family: var(--header-font);
-    padding-left: var(--xlg-pad);
+    padding-left: 400px;
     padding-top: var(--xlg-pad);
     font-size:60px;
 }
@@ -117,6 +125,92 @@ Navigation Links CSS
 Main Content Section CSS
 ===================================================*/
 
+#content {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: var(--med-pad);
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:100%;
+}
+
+.card-header {
+    display: flex;
+    flex-grow: 1;
+    padding-top: var(--med-pad);
+    padding-left: var(--sm-pad);
+    padding-right: var(--sm-pad);
+    padding-bottom: var(--sm-pad);
+}
+
+.card-header h2 {
+    font-family: var(--heavy-font);
+    font-size: 60px;
+    color: var(--blue-mid);
+}
+
+.card-content {
+    display: flex;
+    padding: var(--lg-pad);
+    flex-grow: 2 0 600px;
+}
+
+.card-content p {
+    text-indent: 20px;
+    line-height: 1.5;
+    margin: var(--sm-pad) var(--med-pad) var(--sm-pad) var(--md-pad);
+}
 /* =================================================
 Footer CSS
 ===================================================*/
+
+/* =================================================
+Small Screen Media Query
+===================================================*/
+@media screen and (max-width: 768px){
+
+    /* Removes special positioning and centers header parts */
+    #header-banner {
+        padding:unset;
+        text-align: center;
+        height: unset;
+    }
+
+    /* Removes special positioning and spaces header from other objects */
+    #header-banner h1 {
+        display:block;
+        padding:unset;
+        margin-top:var(--med-pad);
+        margin-bottom:var(--med-pad);
+    }
+
+    /* Removes fancy effects and returns logo to content flow */
+    .bear-logo {
+        position:static;
+        transform: unset;
+        margin-top:var(--med-pad);
+    }
+
+    /* Makes main content flow into a column instead of side by side with headers */
+    /* It's flex-wraps all the way down */
+    .main-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* Removes special positioning and places the menu on the bottom */
+    #main-nav {
+        position:static;
+        width:100%;
+        padding: var(--sm-pad);
+    }
+
+    #main-nav li {
+        padding: unset;
+    }
+}
