@@ -5,6 +5,18 @@ Imports
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Neucha&family=New+Tegomin&family=Noto+Sans+KR&display=swap');
 
 /* =================================================
+Keyframes for animations
+===================================================*/
+
+@keyframes glow {
+    from {
+    }
+    to {
+        color:var(--teal-lightest);
+    }
+}
+
+/* =================================================
 Variable Declarations
 ===================================================*/
 
@@ -69,6 +81,18 @@ body {
     font-family: var(--main-font);
 }
 
+/* Hyperlinks are colored green and have their underlines removed */
+a {
+    color:var(--green-light);
+    text-decoration: none;
+}
+
+/* All hyperlinks glow bright teal when hovered over */
+a:hover {
+    animation: glow 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 /* =================================================
 Header CSS
 ===================================================*/
@@ -91,6 +115,7 @@ Header CSS
     height: 100%;
 }
 
+/* Positions the bear head away from the left side and rotates it slightly for effect */
 .bear-logo {
     position: absolute;
     left: 20%;
@@ -98,11 +123,13 @@ Header CSS
     transform: rotate(-12deg);
 }
 
+/* The bear head is responsive but doesn't take up a ridiculous amount of space at high resolutions */
 .bear-logo img {
-    width:20vw;
+    width:20vw; 
     max-width: 300px;
 }
 
+/* Colors the name */
 .bear-name {
     color: var(--teal-lightest);
 }
@@ -119,19 +146,24 @@ Navigation Links CSS
 ===================================================*/
 
 #main-nav {
+    /* Navigation is positioned in the upper right corner */
     position: absolute;
     right: 0;
     top: 0;
-    background-color: var(--teal-lightest);
+    background-color: var(--green-mid);
     font-family: var(--heavy-font);
     font-size: 25px;
-    padding: var(--med-pad) var(--sm-pad) var(--med-pad) var(--sm-pad);
+    padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
 }
 
 #main-nav li {
     padding: var(--sm-pad) 0 var(--sm-pad) 0;
 }
 
+/* The nav links are white instead of green to make them stand out */
+#main-nav a {
+    color:var(--light-mono);
+}
 
 /* =================================================
 Main Content Section CSS
@@ -162,20 +194,21 @@ Main Content Section CSS
 
 .card-header h2 {
     font-family: var(--heavy-font);
-    font-size: 60px;
-    color: var(--blue-mid);
+    font-size: 40px;
+    color: var(--green-mid);
 }
 
 .card-content {
     display: flex;
-    padding: var(--lg-pad);
+    padding: var(--sm-space);
     flex-grow: 2 0 600px;
 }
 
 .card-content p {
     text-indent: 20px;
+    font-size: 16px;
     line-height: 1.5;
-    margin: var(--sm-pad) var(--med-pad) var(--sm-pad) var(--md-pad);
+    margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
 }
 /* =================================================
 Footer CSS
@@ -205,7 +238,6 @@ Small Screen Media Query
     .bear-logo {
         position:static;
         transform: unset;
-        /* margin-top:var(--med-pad); */
     }
 
     /* Makes main content flow into a column instead of side by side with headers */
