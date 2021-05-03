@@ -150,6 +150,7 @@ Navigation Links CSS
     position: absolute;
     right: 0;
     top: 0;
+    height: 50%;
     background-color: var(--green-mid);
     font-family: var(--heavy-font);
     font-size: 25px;
@@ -186,6 +187,7 @@ Main Content Section CSS
 .card-header {
     display: flex;
     width: 300px;
+    text-align: right;
     padding-top: var(--med-pad);
     padding-left: var(--sm-pad);
     padding-right: var(--sm-pad);
@@ -200,8 +202,9 @@ Main Content Section CSS
 
 .card-content {
     display: flex;
+    flex-grow: 1 0 600px;
     padding: var(--sm-space);
-    flex-grow: 2 0 600px;
+
 }
 
 .card-content p {
@@ -210,13 +213,23 @@ Main Content Section CSS
     line-height: 1.5;
     margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
 }
+
 /* =================================================
 Footer CSS
 ===================================================*/
 
+#footer {
+    width: 100%;
+    padding-top: var(--lg-pad);
+    padding-bottom: var(--lg-pad);
+    text-align: center;
+    border-top: 1px solid var(--green-dark);
+}
+
 /* =================================================
 Small Screen Media Query
 ===================================================*/
+
 @media screen and (max-width: 768px){
 
     /* Removes special positioning and centers header parts */
