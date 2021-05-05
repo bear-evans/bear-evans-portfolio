@@ -145,9 +145,10 @@ Header CSS
 Navigation Links CSS
 ===================================================*/
 
-#main-nav {
+
+/* #main-nav {
     /* Navigation is positioned in the upper right corner */
-    position: absolute;
+/*     position: absolute;
     right: 0;
     top: 0;
     height: 50%;
@@ -155,10 +156,40 @@ Navigation Links CSS
     font-family: var(--heavy-font);
     font-size: 25px;
     padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
+
+    /* Masking cuts out the bottom left corner to give the menu a little flair */
+/*     mask-image: linear-gradient(45deg, transparent 10%, black 10%);
+    -webkit-mask-image: linear-gradient(45deg, transparent 10%, black 10%);
+} */
+
+#main-nav {
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
+    width: 10vw;
+    height:60%;
+    background-color: rgba(0, 0, 0,.5);
+    font-family: var(--heavy-font);
+    font-size: 25px;
+    text-align: center;
+    padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
+
+     mask-image: linear-gradient(45deg, transparent 10%, black 10%);
+    /*    linear-gradient(135deg, transparent 10%, black 10%),
+        linear-gradient(225deg, transparent 10%, black 10%),
+        linear-gradient(315deg, transparent 10%, black 10%);*/
+    -webkit-mask-image: linear-gradient(45deg, transparent 10%, black 10%), linear-gradient(135deg, transparent 10%, black 10%), linear-gradient(225deg, transparent 10%, black 10%), linear-gradient(315deg, transparent 10%, black 10%);
+    -webkit-mask-composite: source-in;
+}
+
+#main-nav ul {
+    margin-top: 15%;
+    width:100%;
 }
 
 #main-nav li {
     padding: var(--sm-pad) 0 var(--sm-pad) 0;
+    width:100%;
 }
 
 /* The nav links are white instead of green to make them stand out */
@@ -265,9 +296,16 @@ Small Screen Media Query
         position:static;
         width:100%;
         padding: var(--sm-pad);
+        mask:unset;
+        -webkit-mask: unset;
+    }
+
+    #main-nav ul {
+        margin: unset;
     }
 
     #main-nav li {
         padding: unset;
+        border:unset;
     }
 }
