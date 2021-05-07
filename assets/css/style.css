@@ -241,22 +241,20 @@ Main Content Section CSS
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    vertical-align: middle;
     width:100%;
 }
 
 /* Displays the section header to the left of the screen */
 .card-header {
     display: flex;
-    flex: 0 0 300px;
-    text-align: right;
-    padding-top: var(--med-pad);
-    padding-left: var(--sm-pad);
-    padding-right: var(--sm-pad);
-    padding-bottom: var(--sm-pad);
+    flex: 0 0 200px;
+    padding: var(--med-pad) var(--sm-pad) var(--sm-pad) var(--sm-pad);
 }
 
 /* Sets the actual header text to a large, dark green font  */
 .card-header h2 {
+    display: flex;
     font-family: var(--heavy-font);
     font-size: 40px;
     color: var(--green-mid);
@@ -424,5 +422,27 @@ Small Screen Media Query
     #main-nav li {
         padding: unset;
         border:unset;
+    }
+
+    .card-header {
+        padding:unset;
+        flex: 0 0 50px;
+    }
+
+    #work-gallery {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .demo-card-outer {
+        transform: unset;
+        width: 82vw;
+        margin-bottom: 1em;
+    }
+    
+    .demo-card-inner {
+        margin:auto;
+        width: 80vw;
+        height: 30vw;
     }
 }
