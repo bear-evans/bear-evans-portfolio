@@ -153,15 +153,19 @@ Header CSS
 /* Positions the bear head away from the left side and rotates it slightly for effect */
 .bear-logo {
     position: absolute;
-    left: 20%;
+    left: 15%;
+    width: 40vw;
+    max-width:800px;
     top:var(--lg-pad);
     transform: rotate(-12deg);
+    text-align: right;
 }
 
 /* The bear head is responsive but doesn't take up a ridiculous amount of space at high resolutions */
 .bear-logo img {
     width:20vw; 
     max-width: 300px;
+    float: left;
 }
 
 /* Colors the name */
@@ -171,14 +175,12 @@ Header CSS
 
 /* Controls the placement of the large header greeting */
 #header-banner h1 {
-    display:inline;
     font-family: var(--header-font);
     padding-top: var(--xlg-pad);
     font-size:5em;
 }
 
 #header-banner h2 {
-    display:block;
     text-align:right;
     font-family: var(--header-font);
     padding-top: var(--lg-pad);
@@ -191,18 +193,19 @@ Navigation Links CSS
 
 /* Hovers a faded black menu to the right of the header  */
 #main-nav {
-    position: absolute;
-    right: 5vw;
-    top: 5vh;
+    position: static;
+    float:right;
+    margin-right: 20vw;
+    margin-top: 5vh;
     width: 10vw;
     height:60%;
-    background-image: url('../images/wood-panel.jpg');
     font-family: var(--heavy-font);
-    font-size: 25px;
-    text-align: center;
+    font-size: 2em;
+    text-align: left;
     padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
 
-    /* This section creates sharp gradients and masks the menu, cutting off the corners */
+    /* Code remains here in case I change my mind again */
+    /* This section creates sharp gradients and masks the menu, cutting off the corners
     mask-image: linear-gradient(45deg, transparent 10%, black 10%),
         linear-gradient(135deg, transparent 10%, black 10%),
         linear-gradient(225deg, transparent 10%, black 10%),
@@ -212,7 +215,7 @@ Navigation Links CSS
         linear-gradient(225deg, transparent 10%, black 10%),
         linear-gradient(315deg, transparent 10%, black 10%);
     mask-composite: add;
-    -webkit-mask-composite: source-in;
+    -webkit-mask-composite: source-in; */
 }
 
 /* fit the navigation list to the menu */
@@ -225,6 +228,7 @@ Navigation Links CSS
 #main-nav li {
     padding: var(--sm-pad) 0 var(--sm-pad) 0;
     width:100%;
+    border-bottom: 1px solid var(--light-mono);
 }
 
 /* The nav links are white instead of green to make them stand out */
@@ -385,6 +389,8 @@ Individual background properties and effects for demo cards
 /* =================================================
 Contact CSS
 ===================================================*/
+
+/* The contact list displays as a table to evenly space the contact options */
 .contact-list {
     display: table;
     width: 100%;
@@ -435,10 +441,24 @@ Small Screen Media Query
         margin-bottom:var(--med-pad);
     }
 
+    /* Centers the headers */
+    #header-banner h2 {
+        text-align: center;
+    }
+
     /* Removes fancy effects and returns logo to content flow */
     .bear-logo {
         position:static;
         transform: unset;
+        text-align: center;
+        width: 100vw;
+        max-width: unset;
+        margin: unset;
+    }
+
+    /* Unsets the float and returns the logo to the flow */
+    .bear-logo img {
+        float: unset;
     }
 
     /* Makes main content flow into a column instead of side by side with headers */
@@ -451,10 +471,15 @@ Small Screen Media Query
     /* Removes special positioning and places the menu on the bottom */
     #main-nav {
         position:static;
+        float: unset;
+        text-align: center;
         width:100%;
+        border-top: 1px solid var(--light-mono);
         padding: var(--sm-pad);
         mask:unset;
         -webkit-mask: unset;
+        margin: unset;
+        margin-top: 1em;
     }
 
     /* Unsets unneeded spacing */
