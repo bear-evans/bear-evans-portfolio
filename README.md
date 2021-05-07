@@ -13,7 +13,7 @@ This website is built using only HTML and CSS.
 Clone the repository using the following command
 
 ```
-git clone git@github.com:brickdwarf/brickdwarf-portfolio.git
+git clone git@github.com:bear-evans/bear-evans-portfolio.git
 ```
 
-You may also view a live demo of the site [here](https://brickdwarf.github.io/brickdwarf-portfolio/).
+You may also view a live demo of the site [here](https://bear-evans.github.io/bear-evans-portfolio/).
