@@ -32,6 +32,14 @@ Keyframes for animations
     }
 }
 
+@keyframes inner-card-glow {
+    from {
+    }
+    to {
+        border: 2px solid var(--light-mono);
+    }
+}
+
 
 /* =================================================
 Variable Declarations
@@ -105,25 +113,9 @@ a {
     text-decoration: none;
 }
 
-a div {
-    color: var(--light-mono);
-}
-
-/* All hyperlinks glow bright teal when hovered over */
-a:hover * {
+/* All hyperlinks glow bright teal when hovered over, as well as any children */
+a:hover, a:hover * {
     animation: glow 1s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-/* Special hover effects for the card borders */
-a:hover .demo-card-outer {
-    animation: card-glow 1s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-/* Special hover effects for the card labels */
-a:hover .demo-card-label {
-    animation: label-glow 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -288,14 +280,24 @@ Work Example Gallery CSS
     flex:1 0;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    padding:5em;
 }
-/* Gives the cards a thick outer green border */
+
+/* targets the first demo card and enlarges it */
+#work-gallery article:first-child .demo-card-inner {
+    width: 800px;
+    height: 500px;
+}
+
+/* Gives the cards a wood panel border and spacing on the bottom, and a slight rotate for effect */
 .demo-card-outer {
     transform: rotate(1deg);
     display: flex;
     padding: var(--sm-pad);
     background-image: url('../images/wood-panel.jpg');
+    margin-bottom: 5em;
 }
 
 /* Sets the background color until the image loads  and sets the card size*/
@@ -303,6 +305,7 @@ Work Example Gallery CSS
     position: relative;
     border: 2px solid var(--green-light);
     background-color: var(--dark-mono);
+    background-size:cover;
     width: 500px;
     height: 300px;
 }
@@ -313,6 +316,7 @@ Work Example Gallery CSS
     bottom: 0;
     left: 0;
 
+    color:var(--light-mono);
     background: var(--green-light);
     padding: var(--sm-pad) var(--lg-pad) var(--sm-pad) var(--sm-pad);
 
@@ -322,12 +326,38 @@ Work Example Gallery CSS
     -webkit-mask-composite: source-in;
 }
 
+/* Special hover effects for the card borders */
+a:hover .demo-card-outer {
+    animation: card-glow 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+a:hover .demo-card-inner {
+    animation: inner-card-glow 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Special hover effects for the card labels */
+a:hover .demo-card-label {
+    animation: glow 0.5s ease-in-out;
+    animation: label-glow 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 /* 
-Individual background properties and effects
+Individual background properties and effects for demo cards
 */
 
 .demo-card-horiseon {
-    background-image: url('../images/horiseon.jpg');
+    background-image: url('../images/demo-cards/horiseon.jpg');
+}
+
+.demo-card-blender {
+    background-image: url('../images/demo-cards/blender.jpg');
+}
+
+.demo-card-dice-roller {
+    background-image: url('../images/demo-cards/dice-roller.jpg');
 }
 
 /* =================================================
