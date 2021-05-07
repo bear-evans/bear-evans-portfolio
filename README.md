@@ -1,5 +1,7 @@
 # Portfolio
 
+![screenshot](https://raw.githubusercontent.com/bear-evans/bear-evans-portfolio/main/assets/images/README-demo.png)
+
 ## About This Project
 
 This portfolio acts as a showcase for my personal projects.
