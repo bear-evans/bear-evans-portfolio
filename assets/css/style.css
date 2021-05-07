@@ -94,6 +94,14 @@ a:hover {
     animation-fill-mode: forwards;
 }
 
+/* Sets all paragraphs to have a slight indent as well as comfortable padding */
+p {
+    text-indent: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
+}
+
 /* =================================================
 Header CSS
 ===================================================*/
@@ -148,6 +156,7 @@ Header CSS
 Navigation Links CSS
 ===================================================*/
 
+/* Hovers a faded black menu to the right of the header  */
 #main-nav {
     position: absolute;
     right: 5vw;
@@ -159,7 +168,9 @@ Navigation Links CSS
     font-size: 25px;
     text-align: center;
     padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
-     mask-image: linear-gradient(45deg, transparent 10%, black 10%),
+
+    /* This section creates sharp gradients and masks the menu, cutting off the corners */
+    mask-image: linear-gradient(45deg, transparent 10%, black 10%),
         linear-gradient(135deg, transparent 10%, black 10%),
         linear-gradient(225deg, transparent 10%, black 10%),
         linear-gradient(315deg, transparent 10%, black 10%);
@@ -171,11 +182,13 @@ Navigation Links CSS
     -webkit-mask-composite: source-in;
 }
 
+/* fit the navigation list to the menu */
 #main-nav ul {
     margin-top: 15%;
     width:100%;
 }
 
+/* Give each item a little spacing */
 #main-nav li {
     padding: var(--sm-pad) 0 var(--sm-pad) 0;
     width:100%;
@@ -190,6 +203,7 @@ Navigation Links CSS
 Main Content Section CSS
 ===================================================*/
 
+/* Arranges the main content in a column, which contains each master section */
 #content {
     display:flex;
     flex-direction: column;
@@ -197,6 +211,7 @@ Main Content Section CSS
     padding: var(--med-pad);
 }
 
+/* The master sections arrange their contents left to right and take up the full width */
 .main-section {
     display: flex;
     flex-direction: row;
@@ -204,6 +219,7 @@ Main Content Section CSS
     width:100%;
 }
 
+/* Displays the section header to the left of the screen */
 .card-header {
     display: flex;
     width: 300px;
@@ -214,24 +230,19 @@ Main Content Section CSS
     padding-bottom: var(--sm-pad);
 }
 
+/* Sets the actual header text to a large, dark green font  */
 .card-header h2 {
     font-family: var(--heavy-font);
     font-size: 40px;
     color: var(--green-mid);
 }
 
+/* Sets the section content to expand and gives it a little padding */
 .card-content {
     display: flex;
     flex-grow: 1 0 600px;
     padding: var(--sm-space);
 
-}
-
-.card-content p {
-    text-indent: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
 }
 
 /* =================================================
@@ -289,10 +300,12 @@ Small Screen Media Query
         -webkit-mask: unset;
     }
 
+    /* Unsets unneeded spacing */
     #main-nav ul {
         margin: unset;
     }
 
+    /* Unsets unneeded spacing */
     #main-nav li {
         padding: unset;
         border:unset;
