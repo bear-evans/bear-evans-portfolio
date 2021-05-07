@@ -383,6 +383,26 @@ Individual background properties and effects for demo cards
 }
 
 /* =================================================
+Contact CSS
+===================================================*/
+.contact-list {
+    display: table;
+    width: 100%;
+    margin-top:2em;
+    list-style-type: none;
+}
+
+.contact-list li {
+    display: table-cell;
+    text-align: center;
+}
+
+.contact-list li a {
+    color:var(--light-mono);
+}
+
+
+/* =================================================
 Footer CSS
 ===================================================*/
 
