@@ -16,6 +16,23 @@ Keyframes for animations
     }
 }
 
+@keyframes card-glow {
+    from {
+    }
+    to {
+        background:var(--teal-lightest);
+    }
+}
+
+@keyframes label-glow {
+    from {
+    }
+    to {
+        background:var(--light-mono);
+    }
+}
+
+
 /* =================================================
 Variable Declarations
 ===================================================*/
@@ -88,15 +105,31 @@ a {
     text-decoration: none;
 }
 
+a div {
+    color: var(--light-mono);
+}
+
 /* All hyperlinks glow bright teal when hovered over */
-a:hover {
+a:hover * {
     animation: glow 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Special hover effects for the card borders */
+a:hover .demo-card-outer {
+    animation: card-glow 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Special hover effects for the card labels */
+a:hover .demo-card-label {
+    animation: label-glow 1s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 /* Sets all paragraphs to have a slight indent as well as comfortable padding */
 p {
-    text-indent: 20px;
+    text-indent: 5em;
     font-size: 16px;
     line-height: 1.5;
     margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
@@ -163,7 +196,7 @@ Navigation Links CSS
     top: 5vh;
     width: 10vw;
     height:60%;
-    background-color: rgba(0, 0, 0,.5);
+    background-image: url('../images/wood-panel.jpg');
     font-family: var(--heavy-font);
     font-size: 25px;
     text-align: center;
@@ -222,7 +255,7 @@ Main Content Section CSS
 /* Displays the section header to the left of the screen */
 .card-header {
     display: flex;
-    width: 300px;
+    flex: 0 0 300px;
     text-align: right;
     padding-top: var(--med-pad);
     padding-left: var(--sm-pad);
@@ -240,9 +273,61 @@ Main Content Section CSS
 /* Sets the section content to expand and gives it a little padding */
 .card-content {
     display: flex;
-    flex-grow: 1 0 600px;
+    flex-direction: column;
+    flex: 1 0;
     padding: var(--sm-space);
+}
 
+/* =================================================
+Work Example Gallery CSS
+===================================================*/
+
+/* Container for the demo cards, controls flex properties */
+#work-gallery {
+    display:flex;
+    flex:1 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Gives the cards a thick outer green border */
+.demo-card-outer {
+    transform: rotate(1deg);
+    display: flex;
+    padding: var(--sm-pad);
+    background-image: url('../images/wood-panel.jpg');
+}
+
+/* Sets the background color until the image loads  and sets the card size*/
+.demo-card-inner {
+    position: relative;
+    border: 2px solid var(--green-light);
+    background-color: var(--dark-mono);
+    width: 500px;
+    height: 300px;
+}
+
+/* Positions the label in the bottom left corner and takes a clip off the top-right corner */
+.demo-card-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: var(--green-light);
+    padding: var(--sm-pad) var(--lg-pad) var(--sm-pad) var(--sm-pad);
+
+    mask-image: linear-gradient(225deg, transparent 10%, black 10%);
+    -webkit-mask-image: linear-gradient(225deg, transparent 10%, black 10%);
+    mask-composite: add;
+    -webkit-mask-composite: source-in;
+}
+
+/* 
+Individual background properties and effects
+*/
+
+.demo-card-horiseon {
+    background-image: url('../images/horiseon.jpg');
 }
 
 /* =================================================
