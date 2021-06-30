@@ -1,194 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Bear Evans</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- BEGIN HEADER SECTION -->
     <header id="header-banner">
-        <div class="fade-wrapper">
-
+      <div class="fade-wrapper">
         <div class="bear-logo">
-            <img src="assets/images/bear-logo.svg" width=200px; />
+          <img src="assets/images/bear-logo.svg" width="200px;" />
 
-            <h1>Hi, I'm <span class="bear-name">Bear</span>.</h1>
-            <h2>I make websites.</h2>
-
+          <h1>Hi, I'm <span class="bear-name">Bear</span>.</h1>
+          <h2>I make websites.</h2>
         </div>
-
 
         <!-- BEGIN NAVIGATION LINKS -->
         <nav id="main-nav">
-            <ul>
-                <li><a href="#biography">Biography</a></li>
-                <li><a href="#work-examples">My Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#work-examples">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
         <!-- END NAVIGATION LINKS -->
-        </div>
+      </div>
     </header>
     <!-- END HEADER SECTION -->
 
-
-
     <!-- BEGIN MAIN CONTENT SECTION -->
     <main id="content">
+      <!-- Begin Biography Section -->
+      <article id="biography" class="main-section">
+        <!-- Title text box, left side -->
+        <div class="card-header">
+          <h2>Biography</h2>
+        </div>
 
-        <!-- Begin Biography Section -->
-        <article id="biography" class="main-section">
+        <!-- Content text box, right side -->
+        <div class="card-content">
+          <p>
+            Howdy, the name's Bear. I'm a full-stack web developer, fiction
+            writer, and gaming enthusiast from Ohio. I am currently attending
+            the Ohio State University Digital Bootcamp. In addition to HTML and
+            CSS, I have experience with Apache, Javascript, MySQL, Wordpress,
+            and more. I even have a couple projects in Python and C#. When not
+            working on a project, I can be found weightlifting, exploring a
+            nearby park, or driving houseplants to suicide under the guise of
+            gardening.
+          </p>
+        </div>
+      </article>
+      <!-- End Biography Section -->
 
-            <!-- Title text box, left side -->
-            <div class="card-header">
-                <h2>Biography</h2>
-            </div>
+      <!-- Begin Work Example Section -->
+      <article id="work-examples" class="main-section">
+        <!-- Title text box, left side -->
+        <div class="card-header">
+          <h2>My Work</h2>
+        </div>
 
-            
-            <!-- Content text box, right side -->
-            <div class="card-content">
-                <p>
-                    Howdy, the name's Bear. I'm a full-stack web developer, fiction writer, and gaming enthusiast from Ohio. I am currently attending the Ohio State University Digital Bootcamp. In addition to HTML and CSS, I have experience with Apache, Javascript, MySQL, Wordpress, and more. I even have a couple projects in Python and C#. When not working on a project, I can be found weightlifting, exploring a nearby park, or driving houseplants to suicide under the guise of gardening.
-                </p>
+        <!-- Content text box, right side -->
+        <div class="card-content">
+          <p>Here are just a few of the projects I've worked on.</p>
 
-            </div>
+          <!-- Begin work example gallery -->
+          <div id="work-gallery">
+            <!-- Each demo card features a single bordered and labeled example  -->
 
-
-        </article>
-        <!-- End Biography Section -->
-
-        <!-- Begin Work Example Section -->
-        <article id="work-examples" class="main-section">
-
-            <!-- Title text box, left side -->
-            <div class="card-header">
-                <h2>My Work</h2>
-            </div>
-
-            
-            <!-- Content text box, right side -->
-            <div class="card-content">
-                <p>
-                   Here are just a few of the projects I've worked on.
-                </p>
-
-                <!-- Begin work example gallery -->
-                <div id="work-gallery">
-
-                    <!-- Each demo card features a single bordered and labeled example  -->
-
-
-                    <!-- Horiseon Code Refactoring Demo Card -->
-                    <article class="demo-card">
-                        <a href="https://bear-evans.github.io/refactor-horiseon/">
-                        <div class="demo-card-outer">
-                            <div class="demo-card-inner demo-card-horiseon">
-                                <div class="demo-card-label">
-                                    <h3>Horiseon Code Refactoring</h3>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    </article>
-
-                    <!-- Placeholder Demo Card -->
-                    <article class="demo-card">
-                        <a href="#">
-                        <div class="demo-card-outer">
-                            <div class="demo-card-inner demo-card-blender">
-                                <div class="demo-card-label">
-                                    <h3>Blender Plugins</h3>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    </article>
-
-                    <!-- Placeholder Demo Card -->
-                    <article class="demo-card">
-                        <a href="#">
-                        <div class="demo-card-outer">
-                            <div class="demo-card-inner demo-card-surf">
-                                <div class="demo-card-label">
-                                    <h3>Surf</h3>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    </article>
-
-
-                    <!-- Placeholder Demo Card -->
-                    <article class="demo-card">
-                        <a href="#">
-                        <div class="demo-card-outer">
-                            <div class="demo-card-inner demo-card-dice-roller">
-                                <div class="demo-card-label">
-                                    <h3>RPG Dice Roller</h3>
-                                </div>
-                            </div>
-                        </div>
-                        </a>
-                    </article>
+            <!-- Horiseon Code Refactoring Demo Card -->
+            <article class="demo-card">
+              <a href="https://bear-evans.github.io/refactor-horiseon/">
+                <div class="demo-card-outer">
+                  <div class="demo-card-inner demo-card-trivia-night">
+                    <div class="demo-card-label">
+                      <h3>Trivia Night</h3>
+                    </div>
+                  </div>
                 </div>
-                <!-- End work example gallery -->
+              </a>
+            </article>
 
-            </div>
-        </article>
-        <!-- End Work Example Section -->
+            <!-- Placeholder Demo Card -->
+            <article class="demo-card">
+              <a href="https://bear-evans.github.io/animal-quiz/">
+                <div class="demo-card-outer">
+                  <div class="demo-card-inner demo-card-animal-quiz">
+                    <div class="demo-card-label">
+                      <h3>Bear's Animal Facts</h3>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
 
+            <!-- Placeholder Demo Card -->
+            <article class="demo-card">
+              <a href="#">
+                <div class="demo-card-outer">
+                  <div class="demo-card-inner demo-card-surf">
+                    <div class="demo-card-label">
+                      <h3>Surf</h3>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
 
-        <!-- Begin Contact Section -->
-        <article id="contact" class="main-section">
+            <!-- Placeholder Demo Card -->
+            <article class="demo-card">
+              <a href="#">
+                <div class="demo-card-outer">
+                  <div class="demo-card-inner demo-card-dice-roller">
+                    <div class="demo-card-label">
+                      <h3>RPG Dice Roller</h3>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <!-- End work example gallery -->
+        </div>
+      </article>
+      <!-- End Work Example Section -->
 
-            <!-- Title text box, left side -->
-            <div class="card-header">
-                <h2>Contact</h2>
-            </div>
+      <!-- Begin Contact Section -->
+      <article id="contact" class="main-section">
+        <!-- Title text box, left side -->
+        <div class="card-header">
+          <h2>Contact</h2>
+        </div>
 
-            
-            <!-- Content text box, right side -->
-            <div class="card-content">
-                <p>
-                   Don't worry, this bear is friendly! If you want to get in touch, you've got a few options.
-                </p>
+        <!-- Content text box, right side -->
+        <div class="card-content">
+          <p>
+            Don't worry, this bear is friendly! If you want to get in touch,
+            you've got a few options.
+          </p>
 
-                <ul class="contact-list">
-                    <li><a href="https://github.com/bear-evans"><img src="assets/icons/github.png" width="30px" /> <br /> Github</a></li>
-                    <li><a href="https://twitter.com/BearEvans9"><img src="assets/icons/twitter.png" width="30px" /> <br /> Twitter</a></li>
-                    <li><a href="mailto:bear-evans@outlook.com"><img src="assets/icons/email.png" width="30px" /> <br /> Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/bear-evans-48872a20a/"><img src="assets/icons/linkedin.png" width="30px" /> <br /> LinkedIn</a></li>
-                </ul>
-
-            </div>
-
-
-        </article>
-        <!-- End Contact Section -->
-
+          <ul class="contact-list">
+            <li>
+              <a href="https://github.com/bear-evans"
+                ><img src="assets/icons/github.png" width="30px" /> <br />
+                Github</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/BearEvans9"
+                ><img src="assets/icons/twitter.png" width="30px" /> <br />
+                Twitter</a
+              >
+            </li>
+            <li>
+              <a href="mailto:bear-evans@outlook.com"
+                ><img src="assets/icons/email.png" width="30px" /> <br />
+                Email</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/bear-evans-48872a20a/"
+                ><img src="assets/icons/linkedin.png" width="30px" /> <br />
+                LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </article>
+      <!-- End Contact Section -->
     </main>
     <!-- END MAIN CONTENT SECTION -->
 
-
-
     <!-- BEGIN FOOTER SECTION -->
     <footer id="footer">
-        <div class="photo-credit">
-            <p>
-                Copyright Bear Evans 2021
-            </p>
-            <p>
-                Header Background by <a href="https://unsplash.com/@worldsbetweenlines?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Patrick Hendry</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-            </p>
-        </div>
+      <div class="photo-credit">
+        <p>Copyright Bear Evans 2021</p>
+        <p>
+          Header Background by
+          <a
+            href="https://unsplash.com/@worldsbetweenlines?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Patrick Hendry</a
+          >
+          on
+          <a
+            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </p>
+      </div>
     </footer>
     <!-- END FOOTER SECTION -->
-
-
-</body>
+  </body>
 </html>

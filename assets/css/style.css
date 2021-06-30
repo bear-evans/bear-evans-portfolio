@@ -2,98 +2,97 @@
 Imports
 ===================================================*/
 
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Neucha&family=New+Tegomin&family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Neucha&family=New+Tegomin&family=Noto+Sans+KR&display=swap");
 
 /* =================================================
 Keyframes for animations
 ===================================================*/
 
 @keyframes glow {
-    from {
-    }
-    to {
-        color:var(--teal-lightest);
-    }
+  from {
+  }
+  to {
+    color: var(--teal-lightest);
+  }
 }
 
 @keyframes card-glow {
-    from {
-    }
-    to {
-        background:var(--teal-lightest);
-    }
+  from {
+  }
+  to {
+    background: var(--teal-lightest);
+  }
 }
 
 @keyframes label-glow {
-    from {
-    }
-    to {
-        background:var(--light-mono);
-    }
+  from {
+  }
+  to {
+    background: var(--light-mono);
+  }
 }
 
 @keyframes inner-card-glow {
-    from {
-    }
-    to {
-        border: 2px solid var(--light-mono);
-    }
+  from {
+  }
+  to {
+    border: 2px solid var(--light-mono);
+  }
 }
-
 
 /* =================================================
 Variable Declarations
 ===================================================*/
 
 :root {
-/* My color pallete
-https://paletton.com/#uid=40l0D1kcw9H7M2q9q5ngqeSkgk7kczbi6H0n8C4KjgkwqpuckgyhKhxbggVe0hxlZgwqPk8-a89tjb9dfebs7GeF6E 
+  /* My color pallete
+https://paletton.com/#uid=40l0D1kcw9H7M2q9q5ngqeSkgk7kczbi6H0n8C4KjgkwqpuckgyhKhxbggVe0hxlZgwqPk8-a89tjb9dfebs7GeF6E
 */
 
-    /* Monochromatic Colors */
-    --light-mono: rgb(243, 243, 243);
-    --dark-mono: rgb(34, 34, 34);
-    /* Brown Colors */
-    --brown-lightest: rgb(160, 95, 59);
-    --brown-light: rgb(118, 80, 58);
-    --brown-mid: rgb(77, 58, 47);
-    --brown-dark: rgb(43, 35, 30);
-    --brown-darkest: rgb(19, 16, 15);
-    /* Blue Colors */
-    --blue-lightest: rgb(77, 96, 143);
-    --blue-light: rgb(60, 77, 118);
-    --blue-mid: rgb(51, 64, 95);
-    --blue-dark: rgb(40, 50, 75);
-    --blue-darkest: rgb(31, 39, 60);
-    /* Green Colors */
-    --green-lightest: rgb(119, 138, 97);
-    --green-light: rgb(95, 110, 78);
-    --green-mid: rgb(64, 73, 53);
-    --green-dark: rgb(46, 55, 36);
-    --green-darkest: rgb(37, 48, 26);
-    /* Teal Colors */
-    --teal-lightest: rgb(28, 158, 122);
-    --teal-light: rgb(43, 107, 89);
-    --teal-mid: rgb(36, 59, 53);
-    --teal-dark: rgb(18, 25, 23);
-    --teal-darkest: rgb(1, 2, 2);
+  /* Monochromatic Colors */
+  --light-mono: rgb(243, 243, 243);
+  --dark-mono: rgb(34, 34, 34);
+  /* Brown Colors */
+  --brown-lightest: rgb(160, 95, 59);
+  --brown-light: rgb(118, 80, 58);
+  --brown-mid: rgb(77, 58, 47);
+  --brown-dark: rgb(43, 35, 30);
+  --brown-darkest: rgb(19, 16, 15);
+  /* Blue Colors */
+  --blue-lightest: rgb(77, 96, 143);
+  --blue-light: rgb(60, 77, 118);
+  --blue-mid: rgb(51, 64, 95);
+  --blue-dark: rgb(40, 50, 75);
+  --blue-darkest: rgb(31, 39, 60);
+  /* Green Colors */
+  --green-lightest: rgb(119, 138, 97);
+  --green-light: rgb(95, 110, 78);
+  --green-mid: rgb(64, 73, 53);
+  --green-dark: rgb(46, 55, 36);
+  --green-darkest: rgb(37, 48, 26);
+  /* Teal Colors */
+  --teal-lightest: rgb(28, 158, 122);
+  --teal-light: rgb(43, 107, 89);
+  --teal-mid: rgb(36, 59, 53);
+  --teal-dark: rgb(18, 25, 23);
+  --teal-darkest: rgb(1, 2, 2);
 
-    /* Font Families */
-    --heavy-font: 'New Tegomin', serif;
-    --header-font: 'Neucha', cursive;
-    --main-font: 'Noto Sans KR', sans-serif;;
-    --monospace-font: 'Cutive Mono', monospace;;
+  /* Font Families */
+  --heavy-font: "New Tegomin", serif;
+  --header-font: "Neucha", cursive;
+  --main-font: "Noto Sans KR", sans-serif;
+  --monospace-font: "Cutive Mono", monospace;
 
-    /* Padding and Spacing */
-    --sm-pad: 10px;
-    --med-pad: 20px;
-    --lg-pad: 50px;
-    --xlg-pad: 100px;
+  /* Padding and Spacing */
+  --sm-pad: 10px;
+  --med-pad: 20px;
+  --lg-pad: 50px;
+  --xlg-pad: 100px;
 
-    --sm-space: 2vw;
-    --med-space: 4vw;
-    --lg-space: 8vw;
-    --xlg-space: 10vw;
+  --sm-space: 2vw;
+  --med-space: 4vw;
+  --lg-space: 8vw;
+  --xlg-space: 10vw;
 }
 
 /* =================================================
@@ -102,30 +101,31 @@ Universal and Page-Wide CSS
 
 /* The background is brown and the font changed to match */
 body {
-    background-color: var(--brown-darkest);
-    color: var(--light-mono);
-    font-family: var(--main-font);
-    overflow-x: hidden;
+  background-color: var(--brown-darkest);
+  color: var(--light-mono);
+  font-family: var(--main-font);
+  overflow-x: hidden;
 }
 
 /* Hyperlinks are colored green and have their underlines removed */
 a {
-    color:var(--green-light);
-    text-decoration: none;
+  color: var(--green-light);
+  text-decoration: none;
 }
 
 /* All hyperlinks glow bright teal when hovered over, as well as any children */
-a:hover, a:hover * {
-    animation: glow 1s ease-in-out;
-    animation-fill-mode: forwards;
+a:hover,
+a:hover * {
+  animation: glow 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /* Sets all paragraphs to have a slight indent as well as comfortable padding */
 p {
-    text-indent: 5em;
-    font-size: 1em;
-    line-height: 2;
-    margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
+  text-indent: 5em;
+  font-size: 1em;
+  line-height: 2;
+  margin: var(--sm-pad) var(--sm-space) var(--sm-pad) var(--sm-space);
 }
 
 /* =================================================
@@ -134,58 +134,58 @@ Header CSS
 
 /* Header takes up a large area and displays a field background */
 #header-banner {
-    position: relative;
-    background-image: url('../images/field.jpg');
-    background-size: cover;
-    background-position: center;
-    font-family: var(--header-font);
-    color: var(--light-mono);
-    width: 100%;
-    height: 600px;
+  position: relative;
+  background-image: url("../images/field.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: var(--header-font);
+  color: var(--light-mono);
+  width: 100%;
+  height: 600px;
 }
 
 /* This gradient overlays the header background, smoothing the transition to the page background color */
 .fade-wrapper {
-    background: linear-gradient(rgba(0, 0, 0, 0), 70%, var(--brown-darkest));
-    width: 100%;
-    height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), 70%, var(--brown-darkest));
+  width: 100%;
+  height: 100%;
 }
 
 /* Positions the bear head away from the left side and rotates it slightly for effect */
 .bear-logo {
-    position: absolute;
-    left: 15%;
-    width: 40vw;
-    max-width:800px;
-    top:var(--lg-pad);
-    transform: rotate(-12deg);
-    text-align: center;
+  position: absolute;
+  left: 15%;
+  width: 40vw;
+  max-width: 800px;
+  top: var(--lg-pad);
+  transform: rotate(-12deg);
+  text-align: center;
 }
 
 /* The bear head is responsive but doesn't take up a ridiculous amount of space at high resolutions */
 .bear-logo img {
-    width:20vw; 
-    max-width: 300px;
-    float: left;
+  width: 20vw;
+  max-width: 300px;
+  float: left;
 }
 
 /* Colors the name */
 .bear-name {
-    color: var(--teal-lightest);
+  color: var(--teal-lightest);
 }
 
 /* Controls the placement of the large header greeting */
 #header-banner h1 {
-    font-family: var(--header-font);
-    padding-top: var(--xlg-pad);
-    font-size:5em;
+  font-family: var(--header-font);
+  padding-top: var(--xlg-pad);
+  font-size: 5em;
 }
 
 #header-banner h2 {
-    text-align:right;
-    font-family: var(--header-font);
-    padding-top: var(--lg-pad);
-    font-size:2em;
+  text-align: right;
+  font-family: var(--header-font);
+  padding-top: var(--lg-pad);
+  font-size: 2em;
 }
 
 /* =================================================
@@ -194,19 +194,19 @@ Navigation Links CSS
 
 /* Hovers a faded black menu to the right of the header  */
 #main-nav {
-    position: static;
-    float:right;
-    margin-right: 20vw;
-    margin-top: 5vh;
-    width: 10vw;
-    height:60%;
-    font-family: var(--heavy-font);
-    font-size: 2em;
-    text-align: left;
-    padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
+  position: static;
+  float: right;
+  margin-right: 20vw;
+  margin-top: 5vh;
+  width: 10vw;
+  height: 60%;
+  font-family: var(--heavy-font);
+  font-size: 2em;
+  text-align: left;
+  padding: var(--lg-pad) var(--med-pad) var(--lg-pad) var(--med-pad);
 
-    /* Code remains here in case I change my mind again */
-    /* This section creates sharp gradients and masks the menu, cutting off the corners
+  /* Code remains here in case I change my mind again */
+  /* This section creates sharp gradients and masks the menu, cutting off the corners
     mask-image: linear-gradient(45deg, transparent 10%, black 10%),
         linear-gradient(135deg, transparent 10%, black 10%),
         linear-gradient(225deg, transparent 10%, black 10%),
@@ -221,20 +221,20 @@ Navigation Links CSS
 
 /* fit the navigation list to the menu */
 #main-nav ul {
-    margin-top: 15%;
-    width:100%;
+  margin-top: 15%;
+  width: 100%;
 }
 
 /* Give each item a little spacing */
 #main-nav li {
-    padding: var(--sm-pad) 0 var(--sm-pad) 0;
-    width:100%;
-    border-bottom: 1px solid var(--light-mono);
+  padding: var(--sm-pad) 0 var(--sm-pad) 0;
+  width: 100%;
+  border-bottom: 1px solid var(--light-mono);
 }
 
 /* The nav links are white instead of green to make them stand out */
 #main-nav a {
-    color:var(--light-mono);
+  color: var(--light-mono);
 }
 
 /* =================================================
@@ -243,43 +243,43 @@ Main Content Section CSS
 
 /* Arranges the main content in a column, which contains each master section, and restricts their width */
 #content {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: var(--med-pad);
-    width: 80vw;
-    max-width:1280px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: var(--med-pad);
+  width: 80vw;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* The master sections take up the full width */
 .main-section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Controls the flex properties and padding, text is handled by h2 */
 .card-header {
-    display: flex;
-    flex: 0 0;
-    padding: var(--med-pad) var(--sm-pad) var(--sm-pad) var(--sm-pad);
+  display: flex;
+  flex: 0 0;
+  padding: var(--med-pad) var(--sm-pad) var(--sm-pad) var(--sm-pad);
 }
 
 /* Sets the actual header text to a large, dark green font  */
 .card-header h2 {
-    display: flex;
-    font-family: var(--heavy-font);
-    font-size: 3em;
-    color: var(--green-mid);
+  display: flex;
+  font-family: var(--heavy-font);
+  font-size: 3em;
+  color: var(--green-mid);
 }
 
 /* Sets the section content to expand and gives it a little padding */
 .card-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0;
-    padding: var(--sm-space);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  padding: var(--sm-space);
 }
 
 /* =================================================
@@ -288,101 +288,101 @@ Work Example Gallery CSS
 
 /* Container for the demo cards, controls flex properties */
 #work-gallery {
-    display:flex;
-    flex:1 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items:center;
+  display: flex;
+  flex: 1 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 
-    padding:5em;
+  padding: 5em;
 }
 
 /* targets the first demo card and enlarges it */
 #work-gallery article:first-child .demo-card-inner {
-    width: 60vw;
-    max-width: 1000px;
-    height: 35vh;
-    max-height: 450px;
-    align-self: stretch;
+  width: 60vw;
+  max-width: 1000px;
+  height: 35vh;
+  max-height: 450px;
+  align-self: stretch;
 }
 
 /* Gives the cards a wood panel border and spacing on the bottom, and a slight rotate for effect */
 .demo-card-outer {
-    transform: rotate(1deg);
-    display: flex;
-    padding: var(--sm-pad);
-    background-image: url('../images/wood-panel.jpg');
-    margin-bottom: 2em;
-    margin-right: 1em;
-    margin-left: 1em;
+  transform: rotate(1deg);
+  display: flex;
+  padding: var(--sm-pad);
+  background-image: url("../images/wood-panel.jpg");
+  margin-bottom: 2em;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 /* Sets the background color until the image loads  and sets the card size*/
 .demo-card-inner {
-    position: relative;
-    border: 2px solid var(--green-light);
-    background-color: var(--dark-mono);
-    background-size:cover;
-    background-position: center;
-    width: 15vw;
-    max-width: 250px;
-    height: 15vh;
+  position: relative;
+  border: 2px solid var(--green-light);
+  background-color: var(--dark-mono);
+  background-size: cover;
+  background-position: center;
+  width: 15vw;
+  max-width: 250px;
+  height: 15vw;
 }
 
 /* Positions the label in the bottom left corner and takes a clip off the top-right corner */
 .demo-card-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-    color:var(--light-mono);
-    background: var(--green-light);
-    padding: var(--sm-pad) var(--lg-pad) var(--sm-pad) var(--sm-pad);
+  color: var(--light-mono);
+  background: var(--green-light);
+  padding: var(--sm-pad) var(--lg-pad) var(--sm-pad) var(--sm-pad);
 
-    mask-image: linear-gradient(225deg, transparent 10%, black 10%);
-    -webkit-mask-image: linear-gradient(225deg, transparent 10%, black 10%);
-    mask-composite: add;
-    -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(225deg, transparent 10%, black 10%);
+  -webkit-mask-image: linear-gradient(225deg, transparent 10%, black 10%);
+  mask-composite: add;
+  -webkit-mask-composite: source-in;
 }
 
 /* Special hover effects for the card borders */
 a:hover .demo-card-outer {
-    animation: card-glow 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: card-glow 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /* Special hover effects for the card borders */
 a:hover .demo-card-inner {
-    animation: inner-card-glow 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: inner-card-glow 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /* Special hover effects for the card labels */
 a:hover .demo-card-label {
-    animation: glow 0.5s ease-in-out;
-    animation: label-glow 0.5s ease-in-out;
-    animation-fill-mode: forwards;
+  animation: glow 0.5s ease-in-out;
+  animation: label-glow 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-/* 
+/*
 Individual background properties and effects for demo cards
 */
 
-.demo-card-horiseon {
-    background-image: url('../images/demo-cards/horiseon.jpg');
+.demo-card-animal-quiz {
+  background-image: url("../images/demo-cards/animal-quiz.jpg");
 }
 
 .demo-card-blender {
-    background-image: url('../images/demo-cards/blender.jpg');
+  background-image: url("../images/demo-cards/blender.jpg");
 }
 
 .demo-card-dice-roller {
-    background-image: url('../images/demo-cards/dice-roller.jpg');
+  background-image: url("../images/demo-cards/dice-roller.jpg");
 }
 
 .demo-card-surf {
-    background-image: url('../images/demo-cards/surf.jpg');
+  background-image: url("../images/demo-cards/surf.jpg");
 }
 
 /* =================================================
@@ -391,146 +391,144 @@ Contact CSS
 
 /* The contact list displays as a table to evenly space the contact options */
 .contact-list {
-    display: table;
-    width: 100%;
-    margin-top:2em;
-    list-style-type: none;
+  display: table;
+  width: 100%;
+  margin-top: 2em;
+  list-style-type: none;
 }
 
 .contact-list li {
-    display: table-cell;
-    text-align: center;
+  display: table-cell;
+  text-align: center;
 }
 
 .contact-list li a {
-    color:var(--light-mono);
+  color: var(--light-mono);
 }
-
 
 /* =================================================
 Footer CSS
 ===================================================*/
 
 #footer {
-    width: 100%;
-    padding-top: var(--lg-pad);
-    padding-bottom: var(--lg-pad);
-    text-align: center;
-    border-top: 1px solid var(--green-dark);
+  width: 100%;
+  padding-top: var(--lg-pad);
+  padding-bottom: var(--lg-pad);
+  text-align: center;
+  border-top: 1px solid var(--green-dark);
 }
 
 /* Gets rid of the text indent for spacing purposes */
 #footer p {
-    text-indent: 0;
+  text-indent: 0;
 }
 
 /* =================================================
 Small Screen Media Query
 ===================================================*/
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
+  /* Removes special positioning and centers header parts */
+  #header-banner {
+    padding: unset;
+    text-align: center;
+    height: unset;
+  }
 
-    /* Removes special positioning and centers header parts */
-    #header-banner {
-        padding:unset;
-        text-align: center;
-        height: unset;
-    }
+  /* Removes special positioning and spaces header from other objects */
+  #header-banner h1 {
+    display: block;
+    padding: unset;
+    margin-top: var(--med-pad);
+    margin-bottom: var(--med-pad);
+  }
 
-    /* Removes special positioning and spaces header from other objects */
-    #header-banner h1 {
-        display:block;
-        padding:unset;
-        margin-top:var(--med-pad);
-        margin-bottom:var(--med-pad);
-    }
+  /* Centers the headers */
+  #header-banner h2 {
+    text-align: center;
+  }
 
-    /* Centers the headers */
-    #header-banner h2 {
-        text-align: center;
-    }
+  /* Removes fancy effects and returns logo to content flow */
+  .bear-logo {
+    position: static;
+    transform: unset;
+    text-align: center;
+    width: 100vw;
+    max-width: unset;
+    margin: unset;
+  }
 
-    /* Removes fancy effects and returns logo to content flow */
-    .bear-logo {
-        position:static;
-        transform: unset;
-        text-align: center;
-        width: 100vw;
-        max-width: unset;
-        margin: unset;
-    }
+  /* Unsets the float and returns the logo to the flow */
+  .bear-logo img {
+    float: unset;
+  }
 
-    /* Unsets the float and returns the logo to the flow */
-    .bear-logo img {
-        float: unset;
-    }
+  #content {
+    width: 95vw;
+    margin: unset;
+    padding: unset;
+  }
 
-    #content {
-        width:95vw;
-        margin: unset;
-        padding:unset;
-    }
+  /* Makes main content flow into a column instead of side by side with headers */
+  /* It's flex-wraps all the way down */
+  .main-section {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-    /* Makes main content flow into a column instead of side by side with headers */
-    /* It's flex-wraps all the way down */
-    .main-section {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+  /* Removes special positioning and places the menu on the bottom */
+  #main-nav {
+    position: static;
+    float: unset;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid var(--light-mono);
+    padding: var(--sm-pad);
+    mask: unset;
+    -webkit-mask: unset;
+    margin: unset;
+    margin-top: 1em;
+  }
 
-    /* Removes special positioning and places the menu on the bottom */
-    #main-nav {
-        position:static;
-        float: unset;
-        text-align: center;
-        width:100%;
-        border-top: 1px solid var(--light-mono);
-        padding: var(--sm-pad);
-        mask:unset;
-        -webkit-mask: unset;
-        margin: unset;
-        margin-top: 1em;
-    }
+  /* Unsets unneeded spacing */
+  #main-nav ul {
+    margin: unset;
+  }
 
-    /* Unsets unneeded spacing */
-    #main-nav ul {
-        margin: unset;
-    }
+  /* Unsets unneeded spacing */
+  #main-nav li {
+    padding: unset;
+    border: unset;
+  }
 
-    /* Unsets unneeded spacing */
-    #main-nav li {
-        padding: unset;
-        border:unset;
-    }
+  /* Shrinks the card header and changes the flex properties for its new direction */
+  .card-header {
+    padding: unset;
+    flex: 0 0;
+  }
 
-    /* Shrinks the card header and changes the flex properties for its new direction */
-    .card-header {
-        padding:unset;
-        flex: 0 0;
-    }
+  #work-gallery {
+    flex-direction: column;
+    padding: 0;
+  }
 
-    #work-gallery {
-        flex-direction: column;
-        padding: 0;
-    }
+  /* shrinks the demo cards */
+  .demo-card-outer {
+    transform: unset;
+    width: 82vw;
+    margin: unset;
+    margin-bottom: 1em;
+  }
 
-    /* shrinks the demo cards */
-    .demo-card-outer {
-        transform: unset;
-        width: 82vw;
-        margin:unset;
-        margin-bottom: 1em;
-    }
-    
-    .demo-card-inner {
-        margin:auto;
-        width: 80vw;
-        height: 20vh;
-        max-width: unset;
-    }
+  .demo-card-inner {
+    margin: auto;
+    width: 80vw;
+    height: 20vh;
+    max-width: unset;
+  }
 
-    #work-gallery article:first-child .demo-card-inner {
-        width: 80vw;
-        height: 30vh;
-    }
+  #work-gallery article:first-child .demo-card-inner {
+    width: 80vw;
+    height: 30vh;
+  }
 }
